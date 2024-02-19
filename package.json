@@ -5,9 +5,9 @@
   "main": "index.html",
   "private": "true",
   "scripts": {
-    "deploy": "scp index.html style.css rd:/var/www/html/j/css-flex-demo/",
-    "lint": "stylelint **/*.css",
-    "start": "live-server"
+    "deploy": "scp -r ./dist/* rd:/var/www/html/j/css-flex-demo/",
+    "lint:css": "stylelint **/*.css",
+    "start": "live-server ./dist"
   },
   "author": "James McDonald",
   "license": "UNLICENSED",
