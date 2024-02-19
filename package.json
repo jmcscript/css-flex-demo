@@ -1,6 +1,6 @@
 {
   "name": "css-flex-demo",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Simple demonstration of display:flex behavior",
   "main": "index.html",
   "private": "true",
