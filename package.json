@@ -6,8 +6,10 @@
   "private": "true",
   "scripts": {
     "deploy": "scp -r ./dist/* rd:/var/www/html/j/css-flex-demo/",
+    "deploy:date": "$todayDirectory = $(\"/var/www/html/j/\", $(Get-Date -Format 'yyyy/MM/dd').ToString() | Join-String -Separator \"\"); ssh rd -t \"mkdir -p '$todayDirectory'\"; scp -r ./dist/* rd:$todayDirectory",
     "lint:css": "stylelint **/*.css",
-    "start": "live-server ./dist"
+    "start": "live-server ./dist",
+    "start:lint": "lint:css && start"
   },
   "author": "James McDonald",
   "license": "UNLICENSED",
